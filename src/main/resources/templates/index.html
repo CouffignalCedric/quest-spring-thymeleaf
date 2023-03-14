@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Doctor Sign In</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div th:fragment="top">
 <header>
     <nav>
         <span>Doctor Secret Service</span>
-        <a href="/">Sign In</a>
+        <a href="@{/}">Sign In</a>
     </nav>
-</header>
+</header></div>
 <ul class="doctor-list">
     <li><a href="/doctor/?number=1&name=William%20Hartnell">Doctor 1</a></li>
     <li><a href="/doctor/?number=2&name=Patrick%20Troughton">Doctor 2</a></li>
@@ -28,6 +29,7 @@
     <li><a href="/doctor/?number=13&name=Jodie%20Whittaker">Doctor 13</a></li>
     <li><a href="/doctor/">Unknown Doctor</a></li>
 </ul>
+<div th:fragment="bottom">
 <footer>
     <ul>
         <li><a href="#">Twitter</a></li>
@@ -35,6 +37,6 @@
         <li><a href="#">TARDIS</a></li>
     </ul>
     <span>Copyright BBC/Terry Nation 1963</span>
-</footer>
+</footer></div>
 </body>
 </html>
